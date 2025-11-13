@@ -9,13 +9,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      href: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+      href: "mailto:oliratessera1@gmail.com",
     },
     { icon: Github, label: "GitHub", href: "https://github.com/Olira1" },
     {
       icon: Send,
       label: "Telegram",
-      href: "https://web.telegram.org/a/#1225216899",
+      href: "https://t.me/@OliraTesgera",
     },
   ];
 
