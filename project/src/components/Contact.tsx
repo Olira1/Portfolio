@@ -15,7 +15,7 @@ const Contact = () => {
     {
       icon: Send,
       label: "Telegram",
-      href: "https://t.me/yourusername",
+      href: "https://web.telegram.org/a/#1225216899",
     },
   ];
 

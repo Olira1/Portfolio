@@ -53,7 +53,7 @@ const About = () => {
           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-[35%,65%] lg:grid-cols-[30%,70%] gap-8 md:gap-12 items-center">
           {/* Left side - Circle with profile image */}
           <div
             className={`transition-all duration-1000 delay-200 ${
@@ -62,7 +62,7 @@ const About = () => {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="w-80 h-80 md:w-96 md:h-96 mx-auto bg-gradient-to-br from-blue-400 to-blue-600 rounded-full shadow-2xl flex items-center justify-center p-2">
+            <div className="w-80 h-80 md:w-80 md:h-80 lg:w-72 lg:h-72 mx-auto bg-gradient-to-br from-blue-400 to-blue-600 rounded-full shadow-2xl flex items-center justify-center p-2">
               <div className="w-full h-full bg-white rounded-full overflow-hidden flex items-center justify-center">
                 {profileImage ? (
                   <img
@@ -109,23 +109,23 @@ const About = () => {
 
             {/* First image with explanation */}
             <div className="mb-8 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-center sm:items-start">
                 <div className="flex-shrink-0">
                   {image1 ? (
                     <img
                       src={image1}
                       alt="Explanation image 1"
-                      className="w-50 h-50 sm:w-60 sm:h-60 object-cover rounded-lg"
+                      className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover rounded-lg"
                     />
                   ) : (
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-sm font-medium">
+                    <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-sm font-medium">
                       Image 1
                     </div>
                   )}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <h4 className="text-lg font-semibold text-slate-800 mb-2">
-                    Teaching What I’ve Learned
+                    Teaching What I've Learned
                   </h4>
                   <p className="text-slate-600 leading-relaxed">
                     I help beginner devs get started with web development —
@@ -138,21 +138,21 @@ const About = () => {
 
             {/* Second image with explanation */}
             <div className="mb-8 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start mb-6">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-center sm:items-start mb-6">
                 <div className="flex-shrink-0">
                   {image2 ? (
                     <img
                       src={image2}
                       alt="Explanation image 2"
-                      className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-lg"
+                      className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover rounded-lg"
                     />
                   ) : (
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-sm font-medium">
+                    <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-sm font-medium">
                       Image 2
                     </div>
                   )}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <h4 className="text-lg font-semibold text-slate-800 mb-2">
                     Tech Stack
                   </h4>
