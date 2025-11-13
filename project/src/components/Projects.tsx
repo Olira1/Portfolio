@@ -34,7 +34,7 @@ const Projects = () => {
       title: "Netflix Clone",
       description:
         "The Netflix Clone is a full-stack web application built with the MERN stack, designed to replicate the core features of the popular streaming platform. Users can browse movies, view details, and enjoy a smooth, responsive interface with dynamic content loading. This project demonstrates my skills in React, API integration, authentication, and UI/UX design, offering a realistic streaming experience similar to Netflix.",
-      demoLink: "#",
+      demoLink: "https://olira1.github.io/Movie-project/",
       githubLink: "https://github.com/Olira1/Movie-project",
       image: project2Image,
     },
