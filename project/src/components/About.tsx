@@ -1,16 +1,23 @@
-import { Code2, Layout, Palette, Zap } from "lucide-react";
+import { Database, Server, Layout, Code } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 // IMPORTANT: Add your images to src/assets/images/ folder before building
 // - profile.jpg (for the circle - recommended: 512x512px, square)
 // - image1.jpg (for first explanation - recommended: 400x400px, square)
 // - image2.jpg (for second explanation - recommended: 400x400px, square)
+// - mongodb.png, express.png, react.png, nodejs.png (for MERN stack - recommended: 64x64px or similar)
 // You can use .png, .webp, or other formats - just update the file extensions below
 
 // When you add your images, uncomment these lines:
-import profileImage from '../assets/images/profile.jpg';
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
+import profileImage from "../assets/images/profile.jpg";
+import image1 from "../assets/images/image1.jpg";
+import image2 from "../assets/images/image2.jpg";
+
+// MERN Stack images - add these files to src/assets/images/ folder
+// import mongodbLogo from '../assets/images/mongodb.png';
+// import expressLogo from '../assets/images/express.png';
+// import reactLogo from '../assets/images/react.png';
+// import nodejsLogo from '../assets/images/nodejs.png';
 
 // For now, these are undefined - placeholders will be shown until you add images
 // const profileImage: string | undefined = undefined;
@@ -20,11 +27,12 @@ import image2 from '../assets/images/image2.jpg';
 const About = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
-  const technologies = [
-    { name: "HTML5", icon: Code2 },
-    { name: "CSS3", icon: Palette },
-    { name: "JavaScript", icon: Zap },
-    { name: "React", icon: Layout },
+  // MERN Stack technologies
+  const mernStack = [
+    { name: "MongoDB", icon: Database, image: undefined }, // Add: import mongodbLogo from '../assets/images/mongodb.png';
+    { name: "Express", icon: Server, image: undefined }, // Add: import expressLogo from '../assets/images/express.png';
+    { name: "React", icon: Layout, image: undefined }, // Add: import reactLogo from '../assets/images/react.png';
+    { name: "Node.js", icon: Code, image: undefined }, // Add: import nodejsLogo from '../assets/images/nodejs.png';
   ];
 
   return (
@@ -130,7 +138,7 @@ const About = () => {
 
             {/* Second image with explanation */}
             <div className="mb-8 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+              <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start mb-6">
                 <div className="flex-shrink-0">
                   {image2 ? (
                     <img
@@ -149,7 +157,7 @@ const About = () => {
                     Tech Stack
                   </h4>
                   <p className="text-slate-600 leading-relaxed">
-                    I’m a MERN Stack Developer with a strong passion for
+                    I'm a MERN Stack Developer with a strong passion for
                     building modern, responsive, and user-friendly web
                     applications. I specialize in using MongoDB, Express.js,
                     React, and Node.js to design and develop full-stack
@@ -157,24 +165,33 @@ const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              {technologies.map((tech, index) => {
-                const Icon = tech.icon;
-                return (
-                  <div
-                    key={tech.name}
-                    className="flex flex-col items-center gap-2 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <Icon size={32} className="text-blue-600" />
-                    <span className="text-sm font-medium text-slate-700">
-                      {tech.name}
-                    </span>
-                  </div>
-                );
-              })}
+              {/* MERN Stack Icons/Images */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                {mernStack.map((tech, index) => {
+                  const Icon = tech.icon;
+                  return (
+                    <div
+                      key={tech.name}
+                      className="flex flex-col items-center gap-2 p-4 bg-slate-50 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      {tech.image ? (
+                        <img
+                          src={tech.image}
+                          alt={tech.name}
+                          className="w-12 h-12 object-contain"
+                        />
+                      ) : (
+                        <Icon size={32} className="text-blue-600" />
+                      )}
+                      <span className="text-sm font-medium text-slate-700 text-center">
+                        {tech.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

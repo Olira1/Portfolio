@@ -91,7 +91,7 @@ const Projects = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center overflow-hidden relative">
+              <div className="h- bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center overflow-hidden relative">
                 {project.image ? (
                   <img
                     src={project.image}

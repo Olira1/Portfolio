@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Send } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const Contact = () => {
@@ -13,9 +13,9 @@ const Contact = () => {
     },
     { icon: Github, label: "GitHub", href: "https://github.com/Olira1" },
     {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      icon: Send,
+      label: "Telegram",
+      href: "https://t.me/yourusername",
     },
   ];
 
